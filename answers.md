@@ -23,7 +23,7 @@ Enforces rules like foreign keys, unique constraints, and triggers to maintain d
 The Transaction Manager checks database constraints before committing a transaction.<br>
 **Example:**<br>
 In an e-commerce system, if an order references a non-existent product ID, the Transaction Manager will abort the transaction, maintaining referential integrity.<br>
- 3. **Isolation**:Ensures that transactions operate independently, without interference, even when executed concurrently.<br>
+  3. **Isolation**:Ensures that transactions operate independently, without interference, even when executed concurrently.<br>
 **Practical Implementation:**<br>
 **Locking Mechanisms:**<br>
 Uses locks (e.g., row-level, table-level) to prevent conflicts between concurrent transactions.<br>
@@ -36,7 +36,7 @@ Repeatable Read: Prevents changes to data read by a transaction until it complet
 **Example:**<br>
 Two transactions updating the same product inventory:<br>
  - One transaction locks the row until its operation completes, preventing the other from making simultaneous changes.
- 4. **Durability** Ensures that once a transaction is committed, its changes are permanent, even in the event of a system failure.<br>
+  4. **Durability** Ensures that once a transaction is committed, its changes are permanent, even in the event of a system failure.<br>
 **Practical Implementation:**<br>
 **Write-Ahead Logging (WAL):**<br>
 The Transaction Manager writes transaction details to a log before applying them to the database. This log is used to recover committed transactions after a crash.<br>
