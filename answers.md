@@ -7,7 +7,7 @@
 Acts as a blueprint for organizing data.
 - **Data Dictionary (Metadata):** -Stores information about the database structure, including details about tables, columns, data types, and constraints.Essential for query processing and ensuring consistency.
 - **Transaction Manager:** -Ensures that database operations are completed successfully as part of a transaction. Provides features like atomicity, consistency, isolation, and durability (ACID properties).
-1. **Atomicity**:Ensures that a transaction is "all or nothing" — either all operations within a transaction are completed successfully, or none are applied to the database.<br>
+  1. **Atomicity**:Ensures that a transaction is "all or nothing" — either all operations within a transaction are completed successfully, or none are applied to the database.<br>
    **Practical Implementation:**<br>
    **Commit and Rollback Mechanisms:**
 If all operations in a transaction succeed, the Transaction Manager performs a commit, permanently applying changes to the database.<br>
@@ -15,7 +15,7 @@ If any operation fails, the Transaction Manager performs a rollback, reverting t
     **Example:**<br>
   A bank transfer where $100 is debited from Account A and credited to Account B:<br>
 If the debit operation succeeds but the credit fails, the transaction is rolled back, ensuring no partial updates.
-2. **Consistency**:Ensures that the database transitions from one valid state to another, maintaining all defined rules, constraints, and relationships.<br>
+  2. **Consistency**:Ensures that the database transitions from one valid state to another, maintaining all defined rules, constraints, and relationships.<br>
 **Practical Implementation:**<br>
 **Integrity Constraints:**<br>
 Enforces rules like foreign keys, unique constraints, and triggers to maintain data validity.<br>
@@ -23,7 +23,7 @@ Enforces rules like foreign keys, unique constraints, and triggers to maintain d
 The Transaction Manager checks database constraints before committing a transaction.<br>
 **Example:**<br>
 In an e-commerce system, if an order references a non-existent product ID, the Transaction Manager will abort the transaction, maintaining referential integrity.<br>
-3. **Isolation**:Ensures that transactions operate independently, without interference, even when executed concurrently.<br>
+ 3. **Isolation**:Ensures that transactions operate independently, without interference, even when executed concurrently.<br>
 **Practical Implementation:**<br>
 **Locking Mechanisms:**<br>
 Uses locks (e.g., row-level, table-level) to prevent conflicts between concurrent transactions.<br>
@@ -36,7 +36,7 @@ Repeatable Read: Prevents changes to data read by a transaction until it complet
 **Example:**<br>
 Two transactions updating the same product inventory:<br>
  - One transaction locks the row until its operation completes, preventing the other from making simultaneous changes.
-4. **Durability** Ensures that once a transaction is committed, its changes are permanent, even in the event of a system failure.<br>
+ 4. **Durability** Ensures that once a transaction is committed, its changes are permanent, even in the event of a system failure.<br>
 **Practical Implementation:**<br>
 **Write-Ahead Logging (WAL):**<br>
 The Transaction Manager writes transaction details to a log before applying them to the database. This log is used to recover committed transactions after a crash.<br>
