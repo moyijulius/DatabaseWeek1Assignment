@@ -7,7 +7,7 @@
 Acts as a blueprint for organizing data.
 - **Data Dictionary (Metadata):** -Stores information about the database structure, including details about tables, columns, data types, and constraints.Essential for query processing and ensuring consistency.
 - **Transaction Manager:** -Ensures that database operations are completed successfully as part of a transaction. Provides features like atomicity, consistency, isolation, and durability (ACID properties).
-   1. **Atomicity**:Ensures that a transaction is "all or nothing" — either all operations within a transaction are completed successfully, or none are applied to the database.<br>
+1. **Atomicity**:Ensures that a transaction is "all or nothing" — either all operations within a transaction are completed successfully, or none are applied to the database.<br>
    **Practical Implementation:**<br>
    **Commit and Rollback Mechanisms:**
 If all operations in a transaction succeed, the Transaction Manager performs a commit, permanently applying changes to the database.<br>
