@@ -6,7 +6,7 @@
 - **Schema:** -The logical structure of the database that defines tables, relationships, views, and constraints.
 Acts as a blueprint for organizing data.
 - **Data Dictionary (Metadata):** -Stores information about the database structure, including details about tables, columns, data types, and constraints.Essential for query processing and ensuring consistency.
-- **Transaction Manager:** -Ensures that database operations are completed successfully as part of a transaction. Provides features like atomicity, consistency, isolation, and durability (ACID properties).
+- **Transaction Manager:** -Ensures that database operations are completed successfully as part of a transaction. Provides features like atomicity, consistency, isolation, and durability (ACID properties).<br>
    1. **Atomicity**:Ensures that a transaction is "all or nothing" — either all operations within a transaction are completed successfully, or none are applied to the database.<br>
    **Practical Implementation:**<br>
    **Commit and Rollback Mechanisms:**
@@ -83,7 +83,7 @@ A **relational database** is a type of database that organizes data into tables 
 **Flexibility** -Supports complex queries and relationships, enabling scalability.
 - **Data Security** -Offers robust access control and permissions to protect sensitive data.
 - **Standardized Language** -Uses SQL, a widely adopted and standardized query language.
-- **Data Redundancy Minimization** -Normalization reduces duplicate data, saving storage space.
+- **Data Redundancy Minimization** -Normalization reduces duplicate data, saving storage space.<br>
 **How Normalization Reduces Redundancy**<br>
 1. **Eliminating Duplicate Data:**
 
@@ -96,10 +96,8 @@ Avoids deletion anomalies (e.g., losing important data when deleting a related r
 3. **Promoting Efficient Data Storage:**
 By storing each piece of data only once in its relevant table, normalization reduces the overall storage requirements.<br>
 **Example:** Storing product details like name and price in a Products table, instead of duplicating them in each order record.<br>
-
 **How Normalization Maintains Data Integrity**<br>
 - **Establishing Relationships with Primary and Foreign Keys:**<br>
-
 **Primary Keys:** Ensure each record in a table is unique.<br>
 **Foreign Keys:** Link related tables, enforcing referential integrity (e.g., orders referencing customers).<br>
 - **Enforcing Constraints:**<br>
@@ -112,7 +110,7 @@ By organizing tables based on functional dependencies (e.g., in 3rd Normal Form,
 In an e-commerce database:<br>
 
 **Before normalization:**<br>
-Orders table includes repeated customer details for each order.
+Orders table includes repeated customer details for each order.<br>
 **After normalization:**<br>
 Separate Customers and Orders tables: Customers table stores unique customer data (e.g., ID, name, address).<br>
 Orders table references customer data via a foreign key (CustomerID), reducing redundancy while ensuring integrity.
